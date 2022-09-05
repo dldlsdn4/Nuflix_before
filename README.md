@@ -1,6 +1,6 @@
 # nugar
 
-[ MVVM 구조 ]
+[MVVM구조]
 Model + View + ViewModel
 
 Model : Data
@@ -22,7 +22,7 @@ View Model : View = 1 : N
 
 단점. VM 설계가 어렵다.
 
-[ Stateless Widget ]
+[Stateless_Widget]
 
 성능이 좋다.
 
@@ -32,13 +32,13 @@ View Model : View = 1 : N
 
 사용자와 상호작용이 없는 것이 특징이다.
 
-[ Stateful Widget]
+[Stateful_Widget]
 
 성능이 별로다.
 
 이벤트 혹은 사용자와의 상호작용이 필요한 것이 특징이다.
 
-[ part 와 import ]
+[part,import]
 
 Dart에서 파일을 참조하는 두 가지 유형.
 
@@ -47,3 +47,11 @@ part : public 과 private 모두 읽음, 제거될 가능성.
 import : public만 읽음
 
 part 대신 import를 사용해야한다.
+
+[Provider]
+
+기존의 만들기 어려웠던 Bloc 패턴(4개 이상의 클래스를 만들어야만 했음.)보다 나은 상태관리.
+
+불필요한 Re-build를 막기위해 최상단 위젯에 Stateful Widget을 추가하여 Parameter로 상태를 전달한다.
+
+전역 데이터 관리.
