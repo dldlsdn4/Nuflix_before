@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:nugar/screen/home_screen.dart';
 import 'package:nugar/widget/bottom_bar.dart';
 
 void main() {
@@ -21,13 +22,32 @@ class _MyAppState extends State<MyApp> {
       theme: ThemeData(
         brightness: Brightness.dark,
         primaryColor: Colors.black,
+        accentColor: Colors.white,
       ),
+      debugShowCheckedModeBanner: false,
       home: DefaultTabController(
         length: 4,
         child: Scaffold(
           body: TabBarView(
             physics: NeverScrollableScrollPhysics(),
-            children: [Container(), Container(), Container(), Container()],
+            children: [
+              HomeScreen(),
+              Container(
+                child: Center(
+                  child: Text('search'),
+                ),
+              ),
+              Container(
+                child: Center(
+                  child: Text('save'),
+                ),
+              ),
+              Container(
+                child: Center(
+                  child: Text('more'),
+                ),
+              ),
+            ],
           ),
           bottomNavigationBar: BottomBar(),
         ),
