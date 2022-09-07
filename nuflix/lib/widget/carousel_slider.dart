@@ -32,14 +32,12 @@ class _CarouselImageState extends State<CarouselImage> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      child: Column(
+      child: Stack(
         children: [
-          Container(
-            padding: EdgeInsets.all(20),
-          ),
           CarouselSlider(
             items: images,
             options: CarouselOptions(
+              height: 400,
               onPageChanged: ((index, reason) {
                 setState(() {
                   _currentPage = index;
@@ -48,79 +46,85 @@ class _CarouselImageState extends State<CarouselImage> {
               }),
             ),
           ),
-          Container(
-            padding: EdgeInsets.fromLTRB(0, 10, 0, 3),
-            child: Text(
-              _currentKeyword,
-              style: TextStyle(fontSize: 11),
-            ),
-          ),
-          Container(
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-              children: [
-                Container(
-                  child: Column(
-                    children: [
-                      likes[_currentPage]
-                          ? IconButton(
-                              onPressed: () {}, icon: Icon(Icons.check))
-                          : IconButton(onPressed: () {}, icon: Icon(Icons.add)),
-                      Text(
-                        '내가 찜한 콘텐츠',
-                        style: TextStyle(fontSize: 11),
-                      )
-                    ],
-                  ),
+          Column(
+            children: [
+              SizedBox(height: 400),
+              Container(
+                padding: EdgeInsets.fromLTRB(0, 10, 0, 3),
+                child: Text(
+                  _currentKeyword,
+                  style: TextStyle(fontSize: 11),
                 ),
-                Container(
-                  padding: EdgeInsets.only(right: 10),
-                  child: TextButton(
-                    style: ButtonStyle(
-                      backgroundColor: MaterialStateProperty.resolveWith(
-                          (states) => Colors.white),
+              ),
+              Container(
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                  children: [
+                    Container(
+                      child: Column(
+                        children: [
+                          likes[_currentPage]
+                              ? IconButton(
+                                  onPressed: () {}, icon: Icon(Icons.check))
+                              : IconButton(
+                                  onPressed: () {}, icon: Icon(Icons.add)),
+                          Text(
+                            '내가 찜한 콘텐츠',
+                            style: TextStyle(fontSize: 11),
+                          )
+                        ],
+                      ),
                     ),
-                    onPressed: () {},
-                    child: Row(
-                      children: [
-                        Icon(Icons.play_arrow, color: Colors.black),
-                        Padding(padding: EdgeInsets.all(3)),
-                        Text('재생', style: TextStyle(color: Colors.black)),
-                        Padding(padding: EdgeInsets.all(4)),
-                      ],
+                    Container(
+                      padding: EdgeInsets.only(right: 10),
+                      child: TextButton(
+                        style: ButtonStyle(
+                          backgroundColor: MaterialStateProperty.resolveWith(
+                              (states) => Colors.white),
+                        ),
+                        onPressed: () {},
+                        child: Row(
+                          children: [
+                            Icon(Icons.play_arrow, color: Colors.black),
+                            Padding(padding: EdgeInsets.all(3)),
+                            Text('재생', style: TextStyle(color: Colors.black)),
+                            Padding(padding: EdgeInsets.all(4)),
+                          ],
+                        ),
+                      ),
                     ),
-                  ),
+                    Container(
+                      padding: EdgeInsets.only(right: 10),
+                      child: Column(
+                        children: [
+                          IconButton(
+                              onPressed: () {
+                                Navigator.of(context).push(
+                                  MaterialPageRoute(
+                                    fullscreenDialog: true,
+                                    builder: (context) {
+                                      return DetailScreen(
+                                        movie: movies[_currentPage],
+                                      );
+                                    },
+                                  ),
+                                );
+                              },
+                              icon: Icon(Icons.info)),
+                          Text('정보', style: TextStyle(fontSize: 11))
+                        ],
+                      ),
+                    ),
+                  ],
                 ),
-                Container(
-                  padding: EdgeInsets.only(right: 10),
-                  child: Column(
-                    children: [
-                      IconButton(
-                          onPressed: () {
-                            Navigator.of(context).push(
-                              MaterialPageRoute(
-                                fullscreenDialog: true,
-                                builder: (context) {
-                                  return DetailScreen(
-                                    movie: movies[_currentPage],
-                                  );
-                                },
-                              ),
-                            );
-                          },
-                          icon: Icon(Icons.info)),
-                      Text('정보', style: TextStyle(fontSize: 11))
-                    ],
-                  ),
-                ),
-              ],
-            ),
+              ),
+              Container(
+                child: Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: makeIndicator(likes, _currentPage)),
+              )
+            ],
           ),
-          Container(
-            child: Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: makeIndicator(likes, _currentPage)),
-          )
         ],
       ),
     );
