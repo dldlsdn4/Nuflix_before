@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:nugar/screen/home_screen.dart';
+import 'package:nugar/screen/more_screen.dart';
 import 'package:nugar/widget/bottom_bar.dart';
 
 void main() {
@@ -42,11 +43,7 @@ class _MyAppState extends State<MyApp> {
                   child: Text('save'),
                 ),
               ),
-              Container(
-                child: Center(
-                  child: Text('more'),
-                ),
-              ),
+              MoreScreen(),
             ],
           ),
           bottomNavigationBar: BottomBar(),
