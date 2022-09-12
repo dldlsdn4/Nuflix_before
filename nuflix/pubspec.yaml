@@ -36,6 +36,7 @@ dependencies:
   carousel_slider:
   flutter_linkify:
   url_launcher:
+  firebase_core: ^1.22.0
 
 dev_dependencies:
   flutter_test:
