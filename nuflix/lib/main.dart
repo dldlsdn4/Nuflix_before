@@ -2,8 +2,13 @@ import 'package:flutter/material.dart';
 import 'package:nugar/screen/home_screen.dart';
 import 'package:nugar/screen/more_screen.dart';
 import 'package:nugar/widget/bottom_bar.dart';
+import 'package:firebase_core/firebase_core.dart';
+import 'firebase_options.dart';
 
-void main() {
+Future<void> main() async {
+  await Firebase.initializeApp(
+    options: DefaultFirebaseOptions.currentPlatform,
+  );
   runApp(const MyApp());
 }
 
