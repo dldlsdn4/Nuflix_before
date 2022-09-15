@@ -2,13 +2,12 @@ import 'package:flutter/material.dart';
 import 'package:nugar/screen/home_screen.dart';
 import 'package:nugar/screen/more_screen.dart';
 import 'package:nugar/widget/bottom_bar.dart';
-import 'package:firebase_core/firebase_core.dart';
-import 'firebase_options.dart';
+// import 'package:firebase_core/firebase_core.dart';
+// import 'firebase_options.dart';
 
-Future<void> main() async {
-  await Firebase.initializeApp(
-    options: DefaultFirebaseOptions.currentPlatform,
-  );
+void main() {
+  // WidgetsFlutterBinding.ensureInitialized();
+  // await Firebase.initializeApp();
   runApp(const MyApp());
 }
 

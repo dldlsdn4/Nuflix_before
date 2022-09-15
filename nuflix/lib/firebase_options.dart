@@ -70,7 +70,8 @@ class DefaultFirebaseOptions {
     messagingSenderId: '976635882050',
     projectId: 'nuflix-d9cfe',
     storageBucket: 'nuflix-d9cfe.appspot.com',
-    iosClientId: '976635882050-hpribhgp3r3noe3dfhe1c2r2smhikg98.apps.googleusercontent.com',
-    iosBundleId: 'com.example.nugar',
+    iosClientId:
+        '976635882050-hpribhgp3r3noe3dfhe1c2r2smhikg98.apps.googleusercontent.com',
+    iosBundleId: 'com.nugar.nuflix',
   );
 }

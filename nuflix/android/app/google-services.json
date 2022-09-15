@@ -29,6 +29,13 @@
             {
               "client_id": "976635882050-keh77s8r47n9u83l6jomul5g338r7iq9.apps.googleusercontent.com",
               "client_type": 3
+            },
+            {
+              "client_id": "976635882050-hpribhgp3r3noe3dfhe1c2r2smhikg98.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.nugar"
+              }
             }
           ]
         }

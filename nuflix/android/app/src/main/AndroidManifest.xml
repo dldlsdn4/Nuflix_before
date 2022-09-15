@@ -1,5 +1,5 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.nugar">
+    package="com.nugar.nuflix">
    <application
         android:label="nugar"
         android:name="${applicationName}"
