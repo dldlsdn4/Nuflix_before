@@ -14,7 +14,7 @@ class MoreScreen extends StatelessWidget {
           children: [
             Container(
               padding: EdgeInsets.only(top: 50),
-              child: CircleAvatar(
+              child: const CircleAvatar(
                 radius: 100,
                 backgroundImage: AssetImage('images/nuflix_logo.png'),
               ),
