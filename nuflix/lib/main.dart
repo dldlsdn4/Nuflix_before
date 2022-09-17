@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:nugar/screen/home_screen.dart';
 import 'package:nugar/screen/more_screen.dart';
+import 'package:nugar/screen/search_screen.dart';
 import 'package:nugar/widget/bottom_bar.dart';
 // import 'package:firebase_core/firebase_core.dart';
 // import 'firebase_options.dart';
@@ -38,11 +39,7 @@ class _MyAppState extends State<MyApp> {
             physics: NeverScrollableScrollPhysics(),
             children: [
               HomeScreen(),
-              Container(
-                child: Center(
-                  child: Text('search'),
-                ),
-              ),
+              SearchScreen(),
               Container(
                 child: Center(
                   child: Text('save'),
