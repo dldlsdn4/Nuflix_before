@@ -64,7 +64,6 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "2.8.7"
->>>>>>> f8b291c4a80102f18530af2bbefc311cee381f21
   collection:
     dependency: transitive
     description:
