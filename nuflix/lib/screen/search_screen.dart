@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:nugar/util.dart';
+
+import '../model/model_movie.dart';
 
 class SearchScreen extends StatefulWidget {
   const SearchScreen({Key? key}) : super(key: key);
@@ -18,6 +21,28 @@ class _SearchScreenState extends State<SearchScreen> {
         _searchText = _filter.text;
       });
     });
+  }
+
+  Widget _buildList(BuildContext context) {
+    List<Movie> movies = MovieData().movies;
+    List<Movie> searchResults = [];
+
+    for (Movie d in movies) {
+      if (d.toString().contains(_searchText)) {
+        searchResults.add(d);
+      }
+    }
+
+    return Expanded(
+      child: GridView.count(
+        crossAxisCount: 3,
+        childAspectRatio: 1 / 1.5,
+        padding: EdgeInsets.all(3),
+        children: [
+          // searchResults.map(movies)=>_buildListItem(context),
+        ],
+      ),
+    );
   }
 
   @override
