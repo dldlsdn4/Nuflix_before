@@ -10,6 +10,9 @@ class Movie {
         poster = map['poster'],
         like = map['like'];
 
+  Movie.fromSnapShot(snapshot)
+      : this.fromMap(snapshot.data as Map<String, dynamic>);
+
   @override
   String toString() => "Movie<$title:$keyword>";
 }

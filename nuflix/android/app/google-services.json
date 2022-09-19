@@ -1,0 +1,46 @@
+{
+  "project_info": {
+    "project_number": "976635882050",
+    "project_id": "nuflix-d9cfe",
+    "storage_bucket": "nuflix-d9cfe.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:976635882050:android:b06ee1f5442f76751d1bdb",
+        "android_client_info": {
+          "package_name": "com.nugar.nuflix"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "976635882050-keh77s8r47n9u83l6jomul5g338r7iq9.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA2vlEzj-Es9jRvWZ24FPCY7aHpfAwt-68"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "976635882050-keh77s8r47n9u83l6jomul5g338r7iq9.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "976635882050-hpribhgp3r3noe3dfhe1c2r2smhikg98.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.nugar"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

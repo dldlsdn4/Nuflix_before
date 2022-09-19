@@ -1,4 +1,4 @@
-package com.example.nugar
+package com.nugar.nuflix
 
 import io.flutter.embedding.android.FlutterActivity
 

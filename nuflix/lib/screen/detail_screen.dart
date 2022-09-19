@@ -48,8 +48,7 @@ class _DetailScreenState extends State<DetailScreen> {
                               children: [
                                 Container(
                                   padding: EdgeInsets.fromLTRB(0, 45, 0, 10),
-                                  child: Image.asset(
-                                      'images/' + widget.movie.poster),
+                                  child: Image.network(widget.movie.poster),
                                   height: 300,
                                 ),
                                 Container(
@@ -126,74 +125,77 @@ class _DetailScreenState extends State<DetailScreen> {
                   ),
                 ],
               ),
-              makeMenuButton(like),
+              Container(
+                color: Colors.black26,
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.start,
+                  children: [
+                    Container(
+                      padding: EdgeInsets.fromLTRB(20, 10, 20, 10),
+                      child: InkWell(
+                        onTap: () {
+                          setState(() {
+                            like = !like;
+                          });
+                        },
+                        child: Column(
+                          children: [
+                            like ? Icon(Icons.check) : Icon(Icons.add),
+                            Padding(
+                              padding: EdgeInsets.all(5),
+                            ),
+                            Text(
+                              '내가 찜한 콘텐츠',
+                              style: TextStyle(
+                                  fontSize: 11, color: Colors.white60),
+                            )
+                          ],
+                        ),
+                      ),
+                    ),
+                    Container(
+                      padding: EdgeInsets.fromLTRB(20, 10, 20, 10),
+                      child: Container(
+                        child: Column(
+                          children: [
+                            Icon(Icons.thumb_up),
+                            Padding(
+                              padding: EdgeInsets.all(5),
+                            ),
+                            Text(
+                              '평가',
+                              style: TextStyle(
+                                  fontSize: 11, color: Colors.white60),
+                            )
+                          ],
+                        ),
+                      ),
+                    ),
+                    Container(
+                      padding: EdgeInsets.fromLTRB(20, 10, 20, 10),
+                      child: Container(
+                        child: Column(
+                          children: [
+                            Icon(Icons.send),
+                            Padding(
+                              padding: EdgeInsets.all(5),
+                            ),
+                            Text(
+                              '공유',
+                              style: TextStyle(
+                                  fontSize: 11, color: Colors.white60),
+                            )
+                          ],
+                        ),
+                      ),
+                    )
+                  ],
+                ),
+              ),
             ],
           ),
         ),
       ),
     );
   }
-}
-
-Widget makeMenuButton(bool like) {
-  return Container(
-    color: Colors.black26,
-    child: Row(
-      mainAxisAlignment: MainAxisAlignment.start,
-      children: [
-        Container(
-          padding: EdgeInsets.fromLTRB(20, 10, 20, 10),
-          child: InkWell(
-            onTap: () {},
-            child: Column(
-              children: [
-                like ? Icon(Icons.check) : Icon(Icons.add),
-                Padding(
-                  padding: EdgeInsets.all(5),
-                ),
-                Text(
-                  '내가 찜한 콘텐츠',
-                  style: TextStyle(fontSize: 11, color: Colors.white60),
-                )
-              ],
-            ),
-          ),
-        ),
-        Container(
-          padding: EdgeInsets.fromLTRB(20, 10, 20, 10),
-          child: Container(
-            child: Column(
-              children: [
-                Icon(Icons.thumb_up),
-                Padding(
-                  padding: EdgeInsets.all(5),
-                ),
-                Text(
-                  '평가',
-                  style: TextStyle(fontSize: 11, color: Colors.white60),
-                )
-              ],
-            ),
-          ),
-        ),
-        Container(
-          padding: EdgeInsets.fromLTRB(20, 10, 20, 10),
-          child: Container(
-            child: Column(
-              children: [
-                Icon(Icons.send),
-                Padding(
-                  padding: EdgeInsets.all(5),
-                ),
-                Text(
-                  '공유',
-                  style: TextStyle(fontSize: 11, color: Colors.white60),
-                )
-              ],
-            ),
-          ),
-        )
-      ],
-    ),
-  );
 }
