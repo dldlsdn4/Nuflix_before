@@ -48,10 +48,35 @@ import : public만 읽음
 
 part 대신 import를 사용해야한다.
 
-[Provider]
+[상태관리][Bloc, Provider]
 
 기존의 만들기 어려웠던 Bloc 패턴(4개 이상의 클래스를 만들어야만 했음.)보다 나은 상태관리.
 
 불필요한 Re-build를 막기위해 최상단 위젯에 Stateful Widget을 추가하여 Parameter로 상태를 전달한다.
 
 전역 데이터 관리.
+
+[비동기처리][Async, Await, Futures]
+
+서버에 요청을 보냈을 때 응답 상태와 상관없이 다음 동작 수행가능
+
+future는 요청한 작업의 결과를 기다리지 않고 바로 다음 작업으로 넘어감.
+후에 작업이 완료되면 결과를 받는 방식으로 비동기 처리를 함
+
+async await
+작업이 완료될 때까지 기다렸다가 결과값을 받고 다음 작업으로 넘어감
+
+[RestApi]
+
+GET : 생성
+
+POST : 조회
+
+PUT : 수정
+
+DELETE : 삭제
+
+[기능검토]
+
+1. Pdf 동시 2개 호출 확인
+
