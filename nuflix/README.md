@@ -14,6 +14,10 @@ ViewModel : View를 위한 Model
 5. ViewModel Data 가공하여 저장
 6. View는 ViewModel과 Data Binding하여 화면에 나타냄
 
+Command : 실행될 기능을 캡슐화함으로써 주어진 여러 기능을 실행할 수 있는 재사용성이 높은 클래스를 설계하는 패턴
+
+Data Binding : Ui 요소와 데이터를 프로그램적 방식으로 연결하지 않고, 선언적 형식으로 결합할 수 있게 도와주는 라이브러리
+
 Command + Data Binding : 의존성을 없앰
 
 View Model : View = 1 : N
@@ -48,7 +52,7 @@ import : public만 읽음
 
 part 대신 import를 사용해야한다.
 
-[상태관리][Bloc, Provider]
+[상태관리][bloc, provider]
 
 기존의 만들기 어려웠던 Bloc 패턴(4개 이상의 클래스를 만들어야만 했음.)보다 나은 상태관리.
 
@@ -56,7 +60,7 @@ part 대신 import를 사용해야한다.
 
 전역 데이터 관리.
 
-[비동기처리][Async, Await, Futures]
+[비동기처리][async, await, futures]
 
 서버에 요청을 보냈을 때 응답 상태와 상관없이 다음 동작 수행가능
 
@@ -79,4 +83,3 @@ DELETE : 삭제
 [기능검토]
 
 1. Pdf 동시 2개 호출 확인
-
