@@ -34,16 +34,18 @@ class _CarouselImageState extends State<CarouselImage> {
     return Container(
       child: Stack(
         children: [
-          CarouselSlider(
-            items: images,
-            options: CarouselOptions(
-              height: 400,
-              onPageChanged: ((index, reason) {
-                setState(() {
-                  _currentPage = index;
-                  _currentKeyword = keywords[_currentPage];
-                });
-              }),
+          Container(
+            child: CarouselSlider(
+              items: images,
+              options: CarouselOptions(
+                height: 400,
+                onPageChanged: ((index, reason) {
+                  setState(() {
+                    _currentPage = index;
+                    _currentKeyword = keywords[_currentPage];
+                  });
+                }),
+              ),
             ),
           ),
           Column(
