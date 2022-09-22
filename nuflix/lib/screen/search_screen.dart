@@ -35,13 +35,28 @@ class _SearchScreenState extends State<SearchScreen> {
 
     return Expanded(
       child: GridView.count(
-        crossAxisCount: 3,
-        childAspectRatio: 1 / 1.5,
-        padding: EdgeInsets.all(3),
-        children: [
-          // searchResults.map(movies)=>_buildListItem(context),
-        ],
+          crossAxisCount: 3,
+          childAspectRatio: 1 / 1.5,
+          padding: EdgeInsets.all(3),
+          children: searchResults
+              .map((movies) => _buildListItem(context, searchResults))
+              .toList()),
+    );
+  }
+
+  Widget _buildListItem(BuildContext context, List<Movie> result) {
+    return InkWell(
+      // child: Image.network(result.poster),
+      child: Container(
+        width: 100,
+        height: 100,
+        color: Colors.teal,
+        // child: Image.network(result.),
       ),
+      onTap: () {
+        print("resulttt");
+        print(result);
+      },
     );
   }
 
@@ -121,7 +136,8 @@ class _SearchScreenState extends State<SearchScreen> {
                       )
               ],
             ),
-          )
+          ),
+          _buildList(context),
         ],
       ),
     );
