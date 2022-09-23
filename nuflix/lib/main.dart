@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:nugar/screen/home_screen.dart';
+import 'package:nugar/screen/like_screen.dart';
 import 'package:nugar/screen/more_screen.dart';
 import 'package:nugar/screen/search_screen.dart';
 import 'package:nugar/widget/bottom_bar.dart';
@@ -40,11 +41,7 @@ class _MyAppState extends State<MyApp> {
             children: [
               HomeScreen(),
               SearchScreen(),
-              Container(
-                child: Center(
-                  child: Text('save'),
-                ),
-              ),
+              LikeScreen(),
               MoreScreen(),
             ],
           ),

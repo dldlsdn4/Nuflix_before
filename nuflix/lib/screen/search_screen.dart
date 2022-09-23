@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:nugar/screen/detail_screen.dart';
 import 'package:nugar/util.dart';
 
 import '../model/model_movie.dart';
@@ -39,23 +40,20 @@ class _SearchScreenState extends State<SearchScreen> {
           childAspectRatio: 1 / 1.5,
           padding: EdgeInsets.all(3),
           children: searchResults
-              .map((movies) => _buildListItem(context, searchResults))
+              .map((movies) => _buildListItem(context, movies))
               .toList()),
     );
   }
 
-  Widget _buildListItem(BuildContext context, List<Movie> result) {
+  Widget _buildListItem(BuildContext context, Movie result) {
     return InkWell(
-      // child: Image.network(result.poster),
-      child: Container(
-        width: 100,
-        height: 100,
-        color: Colors.teal,
-        // child: Image.network(result.),
-      ),
+      child: Image.network(result.poster),
       onTap: () {
-        print("resulttt");
-        print(result);
+        Navigator.of(context).push(MaterialPageRoute<Null>(
+            fullscreenDialog: true,
+            builder: (BuildContext context) {
+              return DetailScreen(movie: result);
+            }));
       },
     );
   }
