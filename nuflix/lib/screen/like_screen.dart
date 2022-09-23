@@ -24,10 +24,10 @@ class _LikeScreenState extends State<LikeScreen> {
   }
 
   Widget _buildList(BuildContext context) {
-    List<Movie> movies = MovieData().movies;
+    List<Movie> likes = LikeData().likes;
     List<Movie> searchResults = [];
 
-    for (Movie d in movies) {
+    for (Movie d in likes) {
       if (d.toString().contains(_searchText)) {
         searchResults.add(d);
       }
@@ -39,7 +39,7 @@ class _LikeScreenState extends State<LikeScreen> {
           childAspectRatio: 1 / 1.5,
           padding: EdgeInsets.all(3),
           children: searchResults
-              .map((movies) => _buildListItem(context, movies))
+              .map((likes) => _buildListItem(context, likes))
               .toList()),
     );
   }

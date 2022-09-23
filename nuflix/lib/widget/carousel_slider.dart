@@ -65,23 +65,15 @@ class _CarouselImageState extends State<CarouselImage> {
                     Container(
                       child: Column(
                         children: [
-                          likes[_currentPage]
-                              ? IconButton(
-                                  onPressed: () {
-                                    setState(() {
-                                      likes[_currentPage] =
-                                          !likes[_currentPage];
-                                    });
-                                  },
-                                  icon: Icon(Icons.check))
-                              : IconButton(
-                                  onPressed: () {
-                                    setState(() {
-                                      likes[_currentPage] =
-                                          !likes[_currentPage];
-                                    });
-                                  },
-                                  icon: Icon(Icons.add)),
+                          IconButton(
+                              onPressed: () {
+                                setState(() {
+                                  likes[_currentPage] = !likes[_currentPage];
+                                });
+                              },
+                              icon: likes[_currentPage]
+                                  ? Icon(Icons.check)
+                                  : Icon(Icons.add)),
                           Text(
                             '내가 찜한 콘텐츠',
                             style: TextStyle(fontSize: 11),

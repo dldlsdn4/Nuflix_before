@@ -49,3 +49,7 @@ class MovieData {
     ),
   ];
 }
+
+class LikeData {
+  List<Movie> likes = [];
+}
