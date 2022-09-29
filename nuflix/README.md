@@ -87,6 +87,18 @@ PUT : 수정
 
 DELETE : 삭제
 
-[기능검토]
+[Stream]
 
-1. Pdf 동시 2개 호출 확인
+큰 Data를 잘게 나누어서 사용한다.
+
+ex) 유튜브 영상 or 동영상 강의
+
+[RxDart]
+
+Bloc과 Stream을 이용
+
+snapshot data로 비동기적 변경을 옵저버패턴을 활용하여 구현
+
+[Retrofit]
+
+http 통신을 위한 library
