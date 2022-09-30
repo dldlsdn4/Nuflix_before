@@ -32,7 +32,7 @@ class _MyAppState extends State<MyApp> {
         accentColor: Colors.white,
       ),
       debugShowCheckedModeBanner: false,
-      home: DefaultTabController(
+      home: const DefaultTabController(
         length: 4,
         child: Scaffold(
           backgroundColor: Colors.black,

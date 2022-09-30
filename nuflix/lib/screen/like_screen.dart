@@ -11,27 +11,15 @@ class LikeScreen extends StatefulWidget {
 }
 
 class _LikeScreenState extends State<LikeScreen> {
-  final TextEditingController _filter = TextEditingController();
-  FocusNode focusNode = FocusNode();
-  String _searchText = "";
-
-  _LikeScreenState() {
-    _filter.addListener(() {
-      setState(() {
-        _searchText = _filter.text;
-      });
-    });
-  }
-
   Widget _buildList(BuildContext context) {
     List<Movie> likes = LikeData().likes;
     List<Movie> searchResults = [];
 
-    for (Movie d in likes) {
-      if (d.toString().contains(_searchText)) {
-        searchResults.add(d);
-      }
-    }
+    // for (Movie d in likes) {
+    //   if (d.toString().contains(_searchText)) {
+    //     searchResults.add(d);
+    //   }
+    // }
 
     return Expanded(
       child: GridView.count(
