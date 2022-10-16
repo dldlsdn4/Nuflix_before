@@ -102,3 +102,9 @@ snapshot data로 비동기적 변경을 옵저버패턴을 활용하여 구현
 [Retrofit]
 
 http 통신을 위한 library
+
+[GraphQL]
+
+AWS와 연계하여 GraphQL 연습할 것.
+
+GraphQL은 클라이언트에서 자기에 필요한 데이터만을 쿼리할 수 있도록 하여 위의 문제를 매우 직관적이고 깔끔하게 해결한다.
