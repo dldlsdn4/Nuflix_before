@@ -105,6 +105,18 @@ http 통신을 위한 library
 
 [GraphQL]
 
-AWS와 연계하여 GraphQL 연습할 것.
-
 GraphQL은 클라이언트에서 자기에 필요한 데이터만을 쿼리할 수 있도록 하여 위의 문제를 매우 직관적이고 깔끔하게 해결한다.
+
+GraphQL을 사용하기 위해서는 서버와 클라이언트의 중간에 GraphQL이 레이어로 하나 더 있다고 보아야 한다.
+
+[GraphQL과RESTAPI차이점]
+
+REST에서는 Resource에 대한 형태 정의와 데이터 요청 방법이 연결되어 있지만, GraphQL에서는 Resource에 대한 형태 정의와 데이터 요청이 완전히 분리되어 있습니다.
+
+REST에서는 Resource의 크기와 형태를 서버에서 결정하지만, GraphQL에서는 Resource에 대한 정보만 정의하고, 필요한 크기와 형태는 client단에서 요청 시 결정합니다.
+
+REST에서는 URI가 Resource를 나타내고 Method가 작업의 유형을 나타내지만, GraphQL에서는 GraphQL Schema가 Resource를 나타내고 Query, Mutation 타입이 작업의 유형을 나타냅니다.
+
+REST에서는 여러 Resource에 접근하고자 할 때 여러 번의 요청이 필요하지만, GraphQL에서는 한번의 요청에서 여러 Resource에 접근할 수 있습니다.
+
+REST에서 각 요청은 해당 엔드포인트에 정의된 핸들링 함수를 호출하여 작업을 처리하지만, GraphQL에서는 요청 받은 각 필드에 대한 resolver를 호출하여 작업을 처리합니다.
