@@ -1,5 +1,29 @@
 # nugar
 
+lib/
+|- model
+|  |_ model_movie.dart
+|
+|- screen
+|  |_ detail_screen.dart
+|  |_ home_screen.dart
+|  |_ like_screen.dart
+|  |_ more_screen.dart
+|  |_ search_screen.dart 
+|
+|- shared_preference
+|  |_ shared_prefs.dart
+|
+|- widget
+|  |_ bottom_bar.dart
+|  |_ box_slider.dart
+|  |_ carousel_slider.dart
+|  |_ circle_slider.dart
+|
+|_ firebase_options.dart
+|_ util.dart
+|_ main.dart
+
 [MVVM구조]
 Model + View + ViewModel
 
@@ -120,6 +144,11 @@ REST에서는 URI가 Resource를 나타내고 Method가 작업의 유형을 나�
 REST에서는 여러 Resource에 접근하고자 할 때 여러 번의 요청이 필요하지만, GraphQL에서는 한번의 요청에서 여러 Resource에 접근할 수 있습니다.
 
 REST에서 각 요청은 해당 엔드포인트에 정의된 핸들링 함수를 호출하여 작업을 처리하지만, GraphQL에서는 요청 받은 각 필드에 대한 resolver를 호출하여 작업을 처리합니다.
+
+URL
+
+https://blog.promedius.ai/flutter-graphqleul-jal-sayonghaeboja/
+
 
 [patch...vs...put]
 
