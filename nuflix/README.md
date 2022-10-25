@@ -133,7 +133,7 @@ GraphQL은 클라이언트에서 자기에 필요한 데이터만을 쿼리할 �
 
 GraphQL을 사용하기 위해서는 서버와 클라이언트의 중간에 GraphQL이 레이어로 하나 더 있다고 보아야 한다.
 
-[GraphQL과RESTAPI차이점]
+[GraphQL,RESTAPI차이점]
 
 REST에서는 Resource에 대한 형태 정의와 데이터 요청 방법이 연결되어 있지만, GraphQL에서는 Resource에 대한 형태 정의와 데이터 요청이 완전히 분리되어 있습니다.
 
